@@ -3,6 +3,7 @@ package Commands;
 import User.User;
 
 import java.io.File;
+import java.sql.SQLOutput;
 
 public class GoDown implements Command {
 
@@ -29,7 +30,8 @@ public class GoDown implements Command {
             for (File item : dir.listFiles()) {
                 if(str.contains((CharSequence) item.getName())){
                     System.out.println(item.getName());
-                    file = new File(file.getAbsolutePath() + item.getName());
+//                    System.out.println(file.getAbsolutePath()+ '/' + item.getName());
+                    file = new File(file.getAbsolutePath() + '/' + item.getName());
                 }
             }
         }else{

@@ -14,7 +14,6 @@ public class GiveInfo implements Command {
     @Override
     public File execute(File file) {
         String a = file.getAbsolutePath();
-
         a = a.replace("Test", "");
 
         System.out.println(a);
